@@ -1,0 +1,18 @@
+.name_block {
+    display: inline;
+    width: 80%;
+    text-align: justify;
+    word-wrap: break-word;
+  }
+
+  @media all and (max-width: 720px) {
+    .name_block {
+        font-size: 13px;
+    }
+  }
+
+  @media all and (max-width: 510px) {
+    .name_block {
+        font-size: 12px;
+    }
+  }

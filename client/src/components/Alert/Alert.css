@@ -1,0 +1,27 @@
+.alert_block {
+    display: block;
+    margin: 0px 0px 0px 0px;
+    padding: 10px;
+    background-color: rgb(255, 124, 124, .3);
+    border: none;
+    border-radius: 10px;
+    color: rgb(158, 92, 92);
+    cursor: default;
+  }
+
+  .alert_content {
+    text-align: justify;
+    word-wrap: break-word;
+  }
+
+  @media all and (max-width: 720px) {
+    .alert_content {
+        font-size: 13px;
+    }
+  }
+
+  @media all and (max-width: 510px) {
+    .alert_content {
+        font-size: 12px;
+    }
+  }
