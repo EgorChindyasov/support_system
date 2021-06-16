@@ -5,8 +5,17 @@ function Home ( {id, name, content, importance} ) {
   // состояние отображения блока
   const [showBlock, setShowBlock] = useState(true)
 
+  const [status, setStatus] = useState(null);
+
   const display = () => setShowBlock(prev => !prev) 
-    if (!showBlock) return null
+    
+  if (!showBlock) {
+      
+    fetch(`http://localhost:8080/api/post/${id}`, { method: 'DELETE' })
+    .then(() => setStatus('Delete successful'))
+      
+    return null
+  }
 
     return (
       <div className='AppBlock'>
