@@ -21,6 +21,7 @@ app.all('/*', (req, res, next) => {
   })
 
 app.use(express.json())
+
 app.use('/api', router)
 
 app.get('/', (req, res) => {

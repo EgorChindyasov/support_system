@@ -5,6 +5,7 @@ const router = new Router()
 const dataController = require('../controllers/controllers')
 
 router.get('/server', dataController.getData)
-router.delete('/post/:id', dataController.deleteData)
+router.delete('/delete/:id', dataController.deleteData)
+router.post('/server', dataController.insertDeleteData)
 
 module.exports = router

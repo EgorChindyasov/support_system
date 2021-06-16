@@ -9,13 +9,28 @@ function Home ( {id, name, content, importance} ) {
 
   const display = () => setShowBlock(prev => !prev) 
     
+  const requestOptions = {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ 
+      name: `${name}`,
+      content: `${content}`,
+      isitimportant: `${importance}` })
+  }
+
   if (!showBlock) {
       
-    fetch(`http://localhost:8080/api/post/${id}`, { method: 'DELETE' })
-    .then(() => setStatus('Delete successful'))
+    fetch(`http://localhost:8080/api/delete/${id}`, { method: 'DELETE' })
+    // .then(() => setStatus('Delete successful'))
+    fetch('/api/server', requestOptions)
       
     return null
   }
+
+  // if (showBlock === false) {
+  //   fetch('/api/server', requestOptions)
+  //     .then(response => response.json())
+  // }
 
     return (
       <div className='AppBlock'>
