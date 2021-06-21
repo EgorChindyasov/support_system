@@ -1,9 +1,26 @@
-.close_block {
+.close_block, .return_block {
     float: right;
     margin: 0.7% 1% 1% 1%;
     color: rgba(245, 100, 141, 0.5);
   }
+
+.return_block {
+  overflow: hidden;
+}
+
+.return_block img {
+  transition: 0.5s; 
+  display: block; 
+ }
+ .return_block img:hover {
+  transform: scale(1.01); 
+ }
   
-  .close_block:hover {
+.icon:hover {
+  width: 25px;
+  height: 25px;
+}
+
+.close_block:hover {
     color: red;
   }
