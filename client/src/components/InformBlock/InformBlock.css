@@ -6,7 +6,11 @@
     cursor: pointer;
   }
   
+.wrapper {
+  transition: 1s;
+}
+
   .wrapper:hover {
     border: 2px solid red;
-    scale: 1.03;
+    transform: scale(1.03);
   }

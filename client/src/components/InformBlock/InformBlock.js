@@ -20,8 +20,8 @@ function InformBlock( {id, name, content, importance, display} ) {
         let style = {}
         if (importance === false) {
             if (!hover) {
-            style = {
-                border: '2px solid rgba(255, 230, 148, 0.5)'
+                style = {
+                    border: '2px solid rgba(255, 230, 148, 0.5)'
                 }
             }
             else {
@@ -29,7 +29,7 @@ function InformBlock( {id, name, content, importance, display} ) {
                     border: '2px solid rgb(253, 206, 49)'
                     }
             }
-            }
+        }
         return style
     }
 
