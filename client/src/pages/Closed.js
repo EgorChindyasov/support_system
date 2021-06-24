@@ -5,7 +5,11 @@ function Closed ( {id, name, content, importance} ) {
   // состояние отображения блока
   const [showBlock, setShowBlock] = useState(true)
 
-  const display = () => setShowBlock(prev => !prev) 
+  const [delBlock, setDelBlock] = useState(true)
+
+  const display = () => setShowBlock(prev => !prev)
+
+  const del = () => setDelBlock(prev => !prev)
     
   const requestOptions = {
     method: 'POST',
@@ -24,6 +28,13 @@ function Closed ( {id, name, content, importance} ) {
     return null
   }
 
+  if (!delBlock) {
+    
+    fetch(`http://localhost:8080/api/closed/${id}`, { method: 'DELETE' })
+
+    return null
+  }
+
     return (
       <div className='AppBlock'>
         <InformBlock id={id} 
@@ -31,6 +42,7 @@ function Closed ( {id, name, content, importance} ) {
                      content={content} 
                      importance={importance}
                      display={display}
+                     del={del}
                      key={id} />
       </div>
     )

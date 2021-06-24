@@ -37,6 +37,13 @@ class DataController {
                                          [name, content, isitimportant])
         res.json(insertData.rows)
     }
+
+    async insertHideData(req, res) {
+        const {name, content, isitimportant} = req.body
+        const insertData = await db.query('insert into hide_data (name, content, isitimportant) values ($1, $2, $3) returning *', 
+                                         [name, content, isitimportant])
+        res.json(insertData.rows)
+    }
 }
 
 module.exports = new DataController()

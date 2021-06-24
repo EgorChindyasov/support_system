@@ -10,5 +10,6 @@ router.post('/server', dataController.insertClosedData)
 router.get('/closed', dataController.getClosedData)
 router.delete('/closed/:id', dataController.deleteFromClosed)
 router.post('/closed', dataController.insertIntoHome)
+router.post('/server/hide', dataController.insertHideData)
 
 module.exports = router
