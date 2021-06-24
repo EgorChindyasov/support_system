@@ -10,7 +10,7 @@
   transition: 1s;
 }
 
-  .wrapper:hover {
-    border: 2px solid red;
-    transform: scale(1.03);
+.wrapper:hover {
+  border: 2px solid red;
+  transform: scale(1.03);
   }

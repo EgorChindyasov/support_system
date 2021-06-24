@@ -5,7 +5,7 @@ function Home ( {id, name, content, importance} ) {
   // состояние отображения блока
   const [showBlock, setShowBlock] = useState(true)
 
-  const display = () => setShowBlock(prev => !prev) 
+  const display = () => setShowBlock(prev => !prev)
     
   const requestOptions = {
     method: 'POST',

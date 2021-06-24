@@ -45,7 +45,7 @@ function InformBlock( {id, name, content, importance, display, del} ) {
                               alert={alert} 
                               importance={importance}
                               display={display}
-                              del={del} />
+                              del={del}/>
                 <Alert id={id} 
                        content={content} 
                        importance={importance} />
