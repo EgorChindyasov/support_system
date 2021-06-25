@@ -20,6 +20,13 @@ class DataController {
         res.json(insertData.rows)
     }
 
+    async insertHideData(req, res) {
+        const {name, content, isitimportant} = req.body
+        const insertData = await db.query('insert into hide_data (name, content, isitimportant) values ($1, $2, $3) returning *', 
+                                         [name, content, isitimportant])
+        res.json(insertData.rows)
+    }
+
     async getClosedData(req, res) {
         const data = await db.query('select * from delete_data')
         res.json(data.rows)
@@ -43,6 +50,17 @@ class DataController {
         const insertData = await db.query('insert into hide_data (name, content, isitimportant) values ($1, $2, $3) returning *', 
                                          [name, content, isitimportant])
         res.json(insertData.rows)
+    }
+
+    async getHidedData(req, res) {
+        const data = await db.query('select * from hide_data')
+        res.json(data.rows)
+    }
+
+    async deleteFromHided(req, res) {
+        const id = req.params.id
+        const data = await db.query('delete from hide_data where id = $1', [id])
+        res.json(data.rows)
     }
 }
 
