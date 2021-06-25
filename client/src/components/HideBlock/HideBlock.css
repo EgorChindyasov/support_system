@@ -1,0 +1,16 @@
+.hide_block {
+    float: right;
+    margin: 0.7% 1% 1% 1%;
+  }
+
+.hide_block {
+    overflow: hidden;
+}
+
+.hide_block {
+    transition: 0.5s; 
+ }
+
+.hide_block:hover {
+    transform: scale(1.3); 
+ }
