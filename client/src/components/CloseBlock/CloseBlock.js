@@ -24,7 +24,7 @@ import './CloseBlock.css'
 // }
 
 // выбор кнопки закрытия информационного блока
-const chooseClose = (display, del) => {
+const closeBlock = (display, del) => {
     // если url.pathname = /home
         if (window.location.pathname === '/home')
             return (
@@ -39,14 +39,22 @@ const chooseClose = (display, del) => {
                     <span onClick={del} >&#10006;</span>
                 </div>
             )
-    }
+    
+
+        if (window.location.pathname === '/hided')
+            return (
+                <div className='close_block'>
+                    <span onClick={del} >&#10006;</span>
+                </div>
+    )   
+}
 
 function CloseBlock ( {display, del} ) {
     return (
         // <div className='close_block'>
         //     <span onClick={display} >&#10006;</span>
         // </div>
-        chooseClose(display, del)
+        closeBlock(display, del)
     )
 }
 

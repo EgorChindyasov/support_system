@@ -5,7 +5,11 @@ function Home ( {id, name, content, importance} ) {
   // состояние отображения блока
   const [showBlock, setShowBlock] = useState(true)
 
+  const [hideBlock, setHideBlock] = useState(true)
+
   const display = () => setShowBlock(prev => !prev)
+
+  const hide = () => setHideBlock(prev => !prev)
     
   const requestOptions = {
     method: 'POST',
@@ -24,6 +28,14 @@ function Home ( {id, name, content, importance} ) {
     return null
   }
 
+  if (!hideBlock) {
+
+    fetch(`http://localhost:8080/api/server/${id}`, { method: 'DELETE' })
+    fetch('/api/server/hide', requestOptions)
+
+    return null
+  }
+
     return (
       <div className='AppBlock'>
         <InformBlock id={id} 
@@ -31,6 +43,7 @@ function Home ( {id, name, content, importance} ) {
                      content={content} 
                      importance={importance}
                      display={display}
+                     hide={hide}
                      key={id} />
       </div>
     )

@@ -6,7 +6,7 @@ import './InformBlock.css'
 
 export const AlertContext = React.createContext()
 
-function InformBlock( {id, name, content, importance, display, del} ) {
+function InformBlock( {id, name, content, importance, display, del, hide} ) {
     // состояние алерта
     const [alert, setAlert] = useState(false)
     // состояние наведения курсора на блок error
@@ -45,7 +45,8 @@ function InformBlock( {id, name, content, importance, display, del} ) {
                               alert={alert} 
                               importance={importance}
                               display={display}
-                              del={del}/>
+                              del={del}
+                              hide={hide}/>
                 <Alert id={id} 
                        content={content} 
                        importance={importance} />

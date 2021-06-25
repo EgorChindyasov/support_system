@@ -19,6 +19,10 @@ const returnBlock = (display) => {
                 </span>
             </div>
         )
+    
+    else {
+        return null
+    }
 }
 
 function ReturnBlock ( {display} ) {
