@@ -1,0 +1,13 @@
+.button_to_home {
+    width: 100%;
+}
+
+.icon_to_home {
+    width: 36px;
+    height: 36px;
+    filter: brightness(80%);
+}
+
+.icon_to_home:hover {
+    filter: brightness(100%);
+}

@@ -1,0 +1,13 @@
+.button_to_hided {
+    width: 100%;
+}
+
+.icon_to_hided {
+    width: 36px;
+    height: 36px;
+    filter: brightness(80%)
+}
+
+.icon_to_hided:hover {
+    filter: brightness(100%)
+}
