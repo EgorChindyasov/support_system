@@ -1,6 +1,8 @@
 import React, {useContext} from 'react'
 import {AlertContext} from '../InformBlock/InformBlock'
 
+import AlertButton from '../AlertButton/AlertButton'
+
 import './Alert.css'
 
 function Alert ( {id, content, importance} ) {
@@ -24,7 +26,7 @@ function Alert ( {id, content, importance} ) {
             <div className='alert_content'>
                 {content}
             </div>
-            {/* <AlertButton id={id}/> */}
+            <AlertButton id={id}/>
         </div>
     )
 }
