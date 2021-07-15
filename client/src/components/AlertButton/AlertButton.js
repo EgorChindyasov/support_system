@@ -8,7 +8,7 @@ const AlertButton = ( {id} ) => {
     return (        
         <div className='btn_details'>
             <div className='btn_details_text'>
-            <Link to={`/about/${id}`}>{id}</Link>
+                <Link to={`/about/${id}`}>Подробнее</Link>
             </div>
         </div>
     )
