@@ -1,0 +1,6 @@
+.block {
+    width: 100%;
+    display: flex;
+    font-display: row;
+    text-align: center;
+}
