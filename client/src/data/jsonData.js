@@ -1,20 +1,5 @@
 import {useState, useEffect} from 'react'
 
-// const errorMessage = [
-//   {id: 1, 
-//    name: 'Отсутствует сигнал между детекторами КНИ и информационно-измерительной аппаратурой', 
-//    content: '7 КНИ не передают сигнал информационно-измерительной аппаратуре. ' +
-//    'Возможные проблемы: повреждены терморадиационностойкие кабеля, отказ ДПЗ', 
-//    isItImportant: true},
-//    {id: 2, 
-//     name: 'Повышение температуры', content: 'В помещении № 3 повышена температура. ' + 
-//     'Возможные проблемы: отказ кондиционерного оборудования', 
-//     isItImportant: false}
-//    ]
-
-//    export { errorMessage }
-
-
    function MyComponent() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);

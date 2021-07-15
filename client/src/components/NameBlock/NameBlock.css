@@ -1,8 +1,8 @@
 .name_block {
-    display: inline;
-    width: 80%;
+    width: 85%;
     text-align: justify;
     word-wrap: break-word;
+    padding-top: 1.5%;
   }
 
   @media all and (max-width: 720px) {

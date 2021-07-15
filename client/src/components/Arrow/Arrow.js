@@ -5,7 +5,7 @@ import arrow_down from '../../img/arrow_down.png'
 import './Arrow.css'
 
 function Arrow ({alert}) {
-    
+
     const isAlertShow = () => {
         if (alert === false) return arrow_down
         else return arrow_up
