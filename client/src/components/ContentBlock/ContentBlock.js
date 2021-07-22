@@ -19,12 +19,6 @@ function ContentBlock ( {toggle, name, alert, importance, display, del, hide} ) 
             <HideBlock display={display} hide={hide}/>
             <ReturnBlock display={display}/>
             <CloseBlock display={display} del={del}/>
-            {/* <IconMessage importance={importance}/>
-            <CloseBlock display={display} del={del}/>
-            <ReturnBlock display={display}/>
-            <HideBlock display={display} hide={hide}/>
-            <Arrow alert={alert}/>
-            <NameBlock name={name}/> */}
         </div>
     )
 }
