@@ -1,5 +1,7 @@
 .button_to_home {
     width: 100%;
+    position: relative;
+    padding-top: 10px;
 }
 
 .icon_to_home {
@@ -10,4 +12,27 @@
 
 .icon_to_home:hover {
     filter: brightness(100%);
+}
+
+.description_home {
+    display: none;
+    width: 6em;
+    height: 1.8em;
+    position: absolute;
+    left: -5.5em;
+    bottom: -1em;
+    z-index: 1;
+}
+
+.description_home {
+    border: 1px solid black;
+    border-radius: 0.7em;
+    background-color: white;
+}
+
+.button_to_home:hover .description_home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
