@@ -6,5 +6,12 @@
 }
 
 .buttons_route {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.buttons_route {
     padding-top: 10px;
 }
