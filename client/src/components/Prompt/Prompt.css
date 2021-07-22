@@ -4,18 +4,18 @@
 
 @media all and (max-width: 1280px) {
     .prompt {
-        font-size: 13px;
+        font-size: 12px;
     }
-}
+  }
 
 @media all and (max-width: 720px) {
     .prompt {
-        font-size: 12px;
+        font-size: 10px;
     }
-}
+  }
 
-@media all and (max-width: 510px) {
+@media all and (max-width: 500px) {
     .prompt {
-        font-size: 11px;
+        font-size: 8px;
     }
 }
