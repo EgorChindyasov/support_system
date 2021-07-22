@@ -17,7 +17,7 @@
 .prompt_hided {
     display: none;
     position: absolute;
-    left: -5.5em;
+    left: -4em;
     bottom: 2.5em;
     z-index: 1;
 }
