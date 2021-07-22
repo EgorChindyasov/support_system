@@ -1,5 +1,7 @@
 .button_to_hided {
     width: 100%;
+    display: relative;
+    padding-top: 10px;
 }
 
 .icon_to_hided {
@@ -10,4 +12,27 @@
 
 .icon_to_hided:hover {
     filter: brightness(100%)
+}
+
+.description_hided {
+    display: none;
+    width: 6em;
+    height: 1.8em;
+    position: absolute;
+    left: -5.5em;
+    bottom: 2.5em;
+    z-index: 1;
+}
+
+.description_hided {
+    border: 1px solid black;
+    border-radius: 0.7em;
+    background-color: white;
+}
+
+.button_to_hided:hover .description_hided {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
