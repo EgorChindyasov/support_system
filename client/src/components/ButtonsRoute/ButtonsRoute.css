@@ -1,11 +1,10 @@
 .buttons_route {
     width: 50px;
-    height: 300px;
     position: fixed;
     top: 40%;
     right: 0;
 }
 
-.buttons_route div {
+.buttons_route {
     padding-top: 10px;
 }
