@@ -17,7 +17,7 @@
 .prompt_closed {
     display: none;
     position: absolute;
-    left: -5.5em;
+    left: -4.5em;
     bottom: -0.5em;
     z-index: 1;
 }
