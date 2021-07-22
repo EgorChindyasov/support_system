@@ -1,5 +1,9 @@
 .button_to_home {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     padding-top: 10px;
 }
@@ -33,4 +37,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media all and (max-width: 1280px) {
+    .icon_to_home {
+        width: 30px;
+        height: 30px;
+    }
+
+    .prompt_home {
+        left: -4.5em;
+        bottom: -1em;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .icon_to_home {
+        width: 24px;
+        height: 24px;
+    }
+
+    .prompt_home {
+        left: -4.2em;
+        bottom: -1em;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .icon_to_home {
+        width: 20px;
+        height: 20px;
+    }
+
+    .prompt_home {
+        left: -3.2em;
+        bottom: -0.6em;
+    }
 }
