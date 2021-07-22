@@ -14,7 +14,7 @@
     filter: brightness(100%);
 }
 
-.description_home {
+.prompt_home {
     display: none;
     width: 6em;
     height: 1.8em;
@@ -24,13 +24,13 @@
     z-index: 1;
 }
 
-.description_home {
+.prompt_home {
     border: 1px solid black;
     border-radius: 0.7em;
     background-color: white;
 }
 
-.button_to_home:hover .description_home {
+.button_to_home:hover .prompt_home {
     display: flex;
     flex-direction: column;
     justify-content: center;

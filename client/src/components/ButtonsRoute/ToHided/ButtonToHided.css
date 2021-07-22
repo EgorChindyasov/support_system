@@ -14,7 +14,7 @@
     filter: brightness(100%)
 }
 
-.description_hided {
+.prompt_hided {
     display: none;
     width: 6em;
     height: 1.8em;
@@ -24,13 +24,13 @@
     z-index: 1;
 }
 
-.description_hided {
+.prompt_hided {
     border: 1px solid black;
     border-radius: 0.7em;
     background-color: white;
 }
 
-.button_to_hided:hover .description_hided {
+.button_to_hided:hover .prompt_hided {
     display: flex;
     flex-direction: column;
     justify-content: center;

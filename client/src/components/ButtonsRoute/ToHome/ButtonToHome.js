@@ -1,15 +1,15 @@
 import React from 'react'
 import homeIMG from '../../../img/home.png'
 
-import Description from '../../Description/Description'
+import Prompt from '../../Prompt/Prompt'
 
 import './ButtonToHome.css'
 
 const ButtonToHome = () => {
     return (
         <div className="button_to_home">
-            <div className="description_home">
-                <Description description={'На главную'} />
+            <div className="prompt_home">
+                <Prompt description={'На главную'} />
             </div>
             <span>
                 <a href="http://localhost:3000/home">
