@@ -1,3 +1,4 @@
+/* для hide */
 .hide_block {
     margin: 0.7% 1% 1% 1%;
   }
@@ -13,3 +14,80 @@
 .hide_block:hover {
     transform: scale(1.3); 
  }
+
+ .hide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+ .hide_block_prompt {
+    display: none;
+    position: absolute;
+    left: -3.5em;
+    bottom: -0.2em;
+    z-index: 1;
+}
+
+.hide_block_prompt {
+    border: 1px solid black;
+    border-radius: 0.7em;
+    background-color: white;
+    cursor: default;
+}
+
+.hide:hover .hide_block_prompt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* для restore */
+.restore_block {
+    margin: 0.7% 1% 1% 1%;
+  }
+
+.restore_block {
+    overflow: hidden;
+}
+
+.restore_block {
+    transition: 0.5s; 
+ }
+
+.restore_block:hover {
+    transform: scale(1.3); 
+ }
+
+ .restore {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+ .restore_block_prompt {
+    display: none;
+    position: absolute;
+    left: -4em;
+    bottom: -0.2em;
+    z-index: 1;
+}
+
+.restore_block_prompt {
+    border: 1px solid black;
+    border-radius: 0.7em;
+    background-color: white;
+    cursor: default;
+}
+
+.restore:hover .restore_block_prompt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
