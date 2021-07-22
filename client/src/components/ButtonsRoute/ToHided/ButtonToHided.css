@@ -16,8 +16,6 @@
 
 .prompt_hided {
     display: none;
-    width: 6em;
-    height: 1.8em;
     position: absolute;
     left: -5.5em;
     bottom: 2.5em;
