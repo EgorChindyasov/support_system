@@ -58,7 +58,7 @@
     }
 
     .prompt_closed {
-        left: -3.8em;
+        left: -3.5em;
         bottom: -0.5em;
     }
 }
@@ -70,7 +70,7 @@
     }
 
     .prompt_closed {
-        left: -2.8em;
+        left: -2em;
         bottom: -0.5em;
     }
 }
