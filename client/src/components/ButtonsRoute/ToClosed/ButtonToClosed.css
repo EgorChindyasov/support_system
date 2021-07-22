@@ -1,5 +1,9 @@
 .button_to_closed {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     display: relative;
     padding-top: 10px;
 }
@@ -33,4 +37,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media all and (max-width: 1280px) {
+    .icon_to_closed {
+        width: 30px;
+        height: 30px;
+    }
+
+    .prompt_closed {
+        left: -4em;
+        bottom: -0.5em;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .icon_to_closed {
+        width: 24px;
+        height: 24px;
+    }
+
+    .prompt_closed {
+        left: -3.8em;
+        bottom: -0.5em;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .icon_to_closed {
+        width: 20px;
+        height: 20px;
+    }
+
+    .prompt_closed {
+        left: -2.8em;
+        bottom: -0.5em;
+    }
 }
