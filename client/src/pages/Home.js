@@ -21,8 +21,7 @@ import InformBlock from '../components/InformBlock/InformBlock'
   
 // }
 
-function Home ( {id, name, content, importance, searchData, names} ) {
-  
+function Home ( {id, name, content, importance} ) {
   // состояние отображения блока
   const [showBlock, setShowBlock] = useState(true)
 
