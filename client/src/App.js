@@ -13,10 +13,10 @@ export const SearchDataContext = React.createContext()
 
 function App() {
 
-  const [value, setValue] = useState('')
+  const [searchData, setSearchData] = useState('')
 
   const handleChange = (event) => {
-        setValue(event.target.value)
+        setSearchData(event.target.value)
   }
 
     return (
@@ -28,7 +28,7 @@ function App() {
         <Route 
           path='/home' 
           component={HomeFetch} 
-          searchData={value} />
+          searchData={searchData} />
         <Route path='/hided' component={HidedFetch} /> 
         <Route path='/closed' component={ClosedFetch} />
     </div>
