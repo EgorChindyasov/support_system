@@ -1,7 +1,27 @@
 import React, { useState } from 'react'
 import InformBlock from '../components/InformBlock/InformBlock'
 
-function Home ( {id, name, content, importance} ) {
+// const Home = ({ data }) => {
+
+//   data.map(item => {
+//     return(
+//       <div className="AppBlock">
+//         <InformBlock 
+//           id={item.id} 
+//           name={item.name}
+//           content={item.content}
+//           importance={item.isitimportant}
+//           key={item.id} />
+//       </div>
+//     )
+//   })
+//     // <div className="AppBlock">
+//     //   <InformBlock />
+//     // </div>
+  
+// }
+
+function Home ( {id, name, content, importance, searchData, names} ) {
   
   // состояние отображения блока
   const [showBlock, setShowBlock] = useState(true)

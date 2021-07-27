@@ -1,27 +1,46 @@
 import React, { useState, useEffect } from 'react'
 import Home from '../pages/Home'
 
-const HomeFetch = () => {
-    const [objects, setObjects] = useState([])
+const HomeFetch = ({ searchData }) => {
+    const [data, setData] = useState([])
 
     useEffect(() => {
         fetch('/api/server')
         .then(res => res.json())
         .then(
             (result) => {
-                setObjects(result)
+                setData(result)
             }
         )
     }, [])
+
+// ---------------------------------------------------------
     
+    // useEffect(() => {
+    //     async function fetchAPI() {
+    //         let res = await fetch('/api/server')
+    //         res = await res.json()
+    //         setData(res)
+    //     }
+    //     fetchAPI()
+    // }, [])
+
+    // return (
+    //     <Home data={data} />
+    // )
+
+// --------------------------------------------------
+
     return (
-        objects.map(message => {
+
+        data.map(message => {
             return (
                       <Home 
                         id={message.id}
-                        name={message.name} 
+                        name={message.name}
                         content={message.content} 
-                        importance={message.isitimportant} 
+                        importance={message.isitimportant}
+                        searchData={searchData} 
                         key={message.id} 
                       />
                     )

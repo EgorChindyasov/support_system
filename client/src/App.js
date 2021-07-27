@@ -1,21 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
 
 import HomeFetch from './fetching/HomeFetch'
 import HidedFetch from './fetching/HidedFetch'
 import ClosedFetch from './fetching/ClosedFetch'
 import ButtonsRoute from './components/ButtonsRoute/ButtonsRoute'
+import Search from './components/Search/Search'
 
 import './App.css'
 
+export const SearchDataContext = React.createContext()
+
 function App() {
+
+  const [value, setValue] = useState('')
+
+  const handleChange = (event) => {
+        setValue(event.target.value)
+  }
+
     return (
     <BrowserRouter>
     <div className='App'>
+      <Search 
+        handleChange={handleChange} />
       <ButtonsRoute />
-      <Route path='/home' component={HomeFetch} />
-      <Route path='/hided' component={HidedFetch} /> 
-      <Route path='/closed' component={ClosedFetch} /> 
+        <Route 
+          path='/home' 
+          component={HomeFetch} 
+          searchData={value} />
+        <Route path='/hided' component={HidedFetch} /> 
+        <Route path='/closed' component={ClosedFetch} />
     </div>
     </BrowserRouter>
   )
