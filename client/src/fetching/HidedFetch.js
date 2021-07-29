@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hided from '../pages/Hided'
 
-const HidedFetch = ({ data }) => {
+const HidedFetch = ({ data, setDataMatch }) => {
 
     // data - массив объектов
+
+    useEffect(() => {
+        if (data.length === 0) {
+          setDataMatch(true)
+        }
+        else {
+          setDataMatch(false)
+        }
+      }, [data, setDataMatch])
 
     return (
         data.map(message => {
