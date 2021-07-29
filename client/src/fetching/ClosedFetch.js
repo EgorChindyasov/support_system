@@ -3,6 +3,8 @@ import Closed from '../pages/Closed'
 
 const ClosedFetch = ({ data }) => {
 
+    // data - массив объектов
+
     return (
         data.map(message => {
             return (
