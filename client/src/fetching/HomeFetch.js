@@ -1,21 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Home from '../pages/Home'
 
-const HomeFetch = () => {
-    const [objects, setObjects] = useState([])
+const HomeFetch = ({ data }) => {
 
-    useEffect(() => {
-        fetch('/api/server')
-        .then(res => res.json())
-        .then(
-            (result) => {
-                setObjects(result)
-            }
-        )
-    }, [])
+    // data - массив объектов
     
     return (
-        objects.map(message => {
+        data.map(message => {
             return (
                       <Home 
                         id={message.id}

@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Closed from '../pages/Closed'
 
-const ClosedFetch = () => {
-    const [objects, setObjects] = useState([])
+const ClosedFetch = ({ data }) => {
 
-    useEffect(() => {
-        fetch('/api/closed')
-        .then(res => res.json())
-        .then(
-            (result) => {
-                setObjects(result)
-            }
-        )
-    }, [])
-    
     return (
-        objects.map(message => {
+        data.map(message => {
             return (
                 <Closed 
                     id={message.id}

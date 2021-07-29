@@ -1,21 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Hided from '../pages/Hided'
 
-const HidedFetch = () => {
-    const [objects, setObjects] = useState([])
+const HidedFetch = ({ data }) => {
 
-    useEffect(() => {
-        fetch('/api/hided')
-        .then(res => res.json())
-        .then(
-            (result) => {
-                setObjects(result)
-            }
-        )
-    }, [])
-    
+    // data - массив объектов
+
     return (
-        objects.map(message => {
+        data.map(message => {
             return (
                 <Hided 
                     id={message.id}
