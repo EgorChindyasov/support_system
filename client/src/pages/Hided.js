@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import InformBlock from '../components/InformBlock/InformBlock'
 
+const URL = 'http://localhost:8080/api'
+
 function Hided ( {id, name, content, importance} ) {
 
   const [displayBlock, setDisplayBlock] = useState(true)
@@ -22,7 +24,7 @@ function Hided ( {id, name, content, importance} ) {
 
   if (!displayBlock) {
       
-    fetch(`http://localhost:8080/api/hided/${id}`, { method: 'DELETE' })
+    fetch(`${URL}/hided/${id}`, { method: 'DELETE' })
     fetch('/api/hided', requestOptions)
       
     return null
@@ -30,7 +32,7 @@ function Hided ( {id, name, content, importance} ) {
 
   if (!delBlock) {
     
-    fetch(`http://localhost:8080/api/hided/${id}`, { method: 'DELETE' })
+    fetch(`${URL}/hided/${id}`, { method: 'DELETE' })
     fetch('/api/server', requestOptions)
 
     return null

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import InformBlock from '../components/InformBlock/InformBlock'
 
+const URL = 'http://localhost:8080/api'
+
 function Home ( {id, name, content, importance} ) {
   
   // состояние отображения блока
@@ -23,7 +25,7 @@ function Home ( {id, name, content, importance} ) {
 
   if (!showBlock) {
       
-    fetch(`http://localhost:8080/api/server/${id}`, { method: 'DELETE' })
+    fetch(`${URL}/server/${id}`, { method: 'DELETE' })
     fetch('/api/server', requestOptions)
       
     return null
@@ -31,7 +33,7 @@ function Home ( {id, name, content, importance} ) {
 
   if (!hideBlock) {
 
-    fetch(`http://localhost:8080/api/server/${id}`, { method: 'DELETE' })
+    fetch(`${URL}/server/${id}`, { method: 'DELETE' })
     fetch('/api/server/hide', requestOptions)
 
     return null
