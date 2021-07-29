@@ -21,6 +21,10 @@ function App() {
   // строка в поле поиска
   const [searchData, setSearchData] = useState('')
 
+  // если значение поля поиска есть подстрока поля name информационного блока, то dataMatch = true,
+  // иначе - false
+  const [dataMatch, setDataMatch] = useState(false)
+
   // функция, вызываемая каждый раз, при переходе на страницу или ее обновлении
   useEffect(() => {
     async function homeFetchAPI() {
@@ -76,16 +80,16 @@ function App() {
       <div className='App'>
         <ButtonsRoute />
           <Route path='/home'>
-            <Search handleChange={handleChange} />
-            <HomeFetch data={search(homeData, searchData)} />
+            <Search handleChange={handleChange} dataMatch={dataMatch} />
+            <HomeFetch data={search(homeData, searchData)} setDataMatch={setDataMatch} />
           </Route>
           <Route path='/hided'>
-            <Search handleChange={handleChange} />
-            <HidedFetch data={search(hidedData, searchData)} />  
+            <Search handleChange={handleChange} dataMatch={dataMatch} />
+            <HidedFetch data={search(hidedData, searchData)} setDataMatch={setDataMatch} />  
           </Route> 
           <Route path='/closed'>
-            <Search handleChange={handleChange} />
-            <ClosedFetch data={search(closedData, searchData)} />  
+            <Search handleChange={handleChange} dataMatch={dataMatch} />
+            <ClosedFetch data={search(closedData, searchData)} setDataMatch={setDataMatch} />  
           </Route> 
       </div>
     </BrowserRouter>
