@@ -6,3 +6,8 @@
     margin-bottom: 1%;
     padding-left: 10px;
 }
+
+.search:focus {
+    border: 1px solid rgb(56, 155, 236);
+    box-shadow: 0 0 3px rgb(56, 155, 236);
+}
