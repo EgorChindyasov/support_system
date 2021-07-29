@@ -21,8 +21,6 @@ function App() {
   // строка в поле поиска
   const [searchData, setSearchData] = useState('')
 
-  const [searchDataNotFound, setSearchDataNotFound] = useState(false)
-
   // функция, вызываемая каждый раз, при переходе на страницу или ее обновлении
   useEffect(() => {
     async function homeFetchAPI() {
