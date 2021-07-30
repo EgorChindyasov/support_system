@@ -11,6 +11,8 @@ import { URLHome, URLHided, URLClosed } from '../../constants'
 
 import './App.css'
 
+export const ControlPanelContext = React.createContext()
+
 function App() {
 
   // данные с сервера, отображаемые на странице home
@@ -82,9 +84,9 @@ function App() {
       <div className='App'>
         <ButtonsRoute />
           <Route path='/home'>
-            <ControlPanel 
-              handleChange={handleChange} 
-              dataMatch={dataMatch} />
+            <ControlPanelContext.Provider value={[handleChange, dataMatch]}>
+              <ControlPanel />
+            </ControlPanelContext.Provider>
             <HomeFetch 
               data={search(homeData, searchData)} 
               setDataMatch={setDataMatch}
@@ -92,9 +94,9 @@ function App() {
               setHomeData={setHomeData} />
           </Route>
           <Route path='/hided'>
-            <ControlPanel 
-              handleChange={handleChange} 
-              dataMatch={dataMatch} />
+            <ControlPanelContext.Provider value={[handleChange, dataMatch]}>
+              <ControlPanel />
+            </ControlPanelContext.Provider>
             <HidedFetch 
               data={search(hidedData, searchData)} 
               setDataMatch={setDataMatch}
@@ -102,9 +104,9 @@ function App() {
               setHidedData={setHidedData} />  
           </Route> 
           <Route path='/closed'>
-            <ControlPanel 
-                handleChange={handleChange} 
-                dataMatch={dataMatch} />
+            <ControlPanelContext.Provider value={[handleChange, dataMatch]}>
+              <ControlPanel />
+            </ControlPanelContext.Provider>
             <ClosedFetch 
               data={search(closedData, searchData)} 
               setDataMatch={setDataMatch}
