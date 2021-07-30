@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
 
-import SearchPanel from '../SearchPanel/SearchPanel'
+import ControlPanel from '../ControlPanel/ControlPanel'
 import HomeFetch from '../../fetching/HomeFetch'
 import HidedFetch from '../../fetching/HidedFetch'
 import ClosedFetch from '../../fetching/ClosedFetch'
@@ -82,7 +82,7 @@ function App() {
       <div className='App'>
         <ButtonsRoute />
           <Route path='/home'>
-            <SearchPanel 
+            <ControlPanel 
               handleChange={handleChange} 
               dataMatch={dataMatch} />
             <HomeFetch 
@@ -92,7 +92,7 @@ function App() {
               setHomeData={setHomeData} />
           </Route>
           <Route path='/hided'>
-            <SearchPanel 
+            <ControlPanel 
               handleChange={handleChange} 
               dataMatch={dataMatch} />
             <HidedFetch 
@@ -102,9 +102,9 @@ function App() {
               setHidedData={setHidedData} />  
           </Route> 
           <Route path='/closed'>
-            <SearchPanel 
-              handleChange={handleChange} 
-              dataMatch={dataMatch} />
+            <ControlPanel 
+                handleChange={handleChange} 
+                dataMatch={dataMatch} />
             <ClosedFetch 
               data={search(closedData, searchData)} 
               setDataMatch={setDataMatch}
