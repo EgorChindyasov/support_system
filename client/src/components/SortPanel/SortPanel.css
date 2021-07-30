@@ -1,0 +1,17 @@
+.sort_panel {
+    width: 22%;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.sort_panel select {
+    text-align: center;
+    font-size: 13px;
+    padding-top: 3px;
+    margin: 0;
+}
+
+.sort_panel option {
+    text-align: center;
+}
