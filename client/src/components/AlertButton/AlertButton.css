@@ -2,36 +2,91 @@
     font-family: sans-serif;
     font-size: 14px;
     color: black;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
     line-height: 1.8em;
     text-decoration: none;
   }
   
 .btn_details {
-  width: 10%;
+  width: 11%;
+  height: 5%;
+  margin-top: 0.3%;
+  margin-bottom: 1%;
   border-radius: 5px;
   background-color: rgba(253, 243, 245, 0.7);
+  float: right;
   cursor: pointer;
-  margin-top: 0.5%;
-  margin-bottom: 0.5%;
-  margin-right: 1%;
+}
+  
+.btn_details:hover {
+  background-color: rgba(236, 234, 235, 0.952);
+}
+  
+.btn_details:active {
+  background-color: rgba(253, 243, 245, 0.7);
 }
 
-  /* .btn_details {
-    margin: 0px 0px 0px 0px;
-    height: 25px;
-    float: right;
-    border-radius: 5px;
-    vertical-align: middle;
-    background-color: rgba(253, 243, 245, 0.7);
-    cursor: pointer;
-  } */
-  
-  .btn_details:hover {
-    background-color: rgba(236, 234, 235, 0.952);
+@media all and (max-width: 1350px) {
+  .btn_details_text {
+    font-size: 13px;
   }
-  
-  .btn_details:active {
-    background-color: rgba(253, 243, 245, 0.7);
+  .btn_details {
+    width: 12%;
   }
+}
+
+@media all and (max-width: 1124px) {
+  .btn_details {
+    width: 13%;
+  }
+}
+
+@media all and (max-width: 1038px) {
+  .btn_details {
+    width: 14%;
+  }
+}
+
+@media all and (max-width: 966px) {
+  .btn_details_text {
+    font-size: 12px;
+  }
+  .btn_details {
+    width: 15%;
+  }
+}
+
+@media all and (max-width: 834px) {
+  .btn_details_text {
+    font-size: 11px;
+  }
+  .btn_details {
+    width: 16%;
+  }
+}
+
+@media all and (max-width: 704px) {
+  .btn_details {
+    width: 17%;
+  }
+}
+
+@media all and (max-width: 663px) {
+  .btn_details_text {
+    font-size: 10px;
+  }
+  .btn_details {
+    width: 18%;
+  }
+}
+
+@media all and (max-width: 605px) {
+  .btn_details_text {
+    font-size: 9px;
+  }
+  .btn_details {
+    width: 20%;
+  }
+}
+  

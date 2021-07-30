@@ -1,22 +1,19 @@
-
-
 .alert_block {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     width: 100%;
     margin: 0;
     background-color: rgb(255, 124, 124, .3);
     border: none;
     border-radius: 10px;
     color: rgb(158, 92, 92);
+    padding-bottom: 2%;
     cursor: default;
   }
 
   .alert_content {
-    width: 90%;
-    margin: 0;
-    padding-left: 1%;
-    padding-top: 1%;
+    width: 100%;
+    padding: 1%;
     word-wrap: break-word;
   }
 
