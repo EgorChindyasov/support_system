@@ -25,8 +25,8 @@ function Alert ( {id, content, importance} ) {
         <div className='alert_block' style={setStyle()}>
             <div className='alert_content'>
                 {content}
+                <AlertButton id={id}/>
             </div>
-            <AlertButton id={id}/>
         </div>
     )
 }
