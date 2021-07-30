@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import Closed from '../pages/Closed'
 
-const ClosedFetch = ({ data, setDataMatch }) => {
+const ClosedFetch = ({ data, setDataMatch, searchData, setClosedData }) => {
 
     // data - массив объектов
 
     useEffect(() => {
-        if (data.length === 0) {
+        if (data.length === 0 && searchData != 0) {
           setDataMatch(true)
         }
         else {
           setDataMatch(false)
         }
-      }, [data, setDataMatch])
+      }, [data, setDataMatch, searchData])
 
     return (
         data.map(message => {
@@ -21,7 +21,8 @@ const ClosedFetch = ({ data, setDataMatch }) => {
                     id={message.id}
                     name={message.name} 
                     content={message.content} 
-                    importance={message.isitimportant} 
+                    importance={message.importance}
+                    setClosedData={setClosedData} 
                     key={message.id} 
                 />
             )
