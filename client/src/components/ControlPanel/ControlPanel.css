@@ -1,0 +1,5 @@
+.control_panel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
