@@ -17,7 +17,7 @@ const Search = ({ handleChange, dataMatch }) => {
 
     return (
             <input 
-                className='search' 
+                className='search_panel' 
                 type='text' 
                 placeholder='Поиск'
                 style = {setStyle()} 
