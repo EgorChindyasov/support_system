@@ -4,7 +4,6 @@ import { ControlPanelContext } from '../App/App'
 
 import './SearchPanel.css'
 
-// const Search = ({ handleChange, dataMatch }) => {
 const Search = () => {
 
     const [handleChange, dataMatch] = useContext(ControlPanelContext)
