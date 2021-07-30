@@ -6,7 +6,8 @@ import './SearchPanel.css'
 
 const Search = () => {
 
-    const [handleChange, dataMatch] = useContext(ControlPanelContext)
+    const { searchPanel } = useContext(ControlPanelContext)
+    const [dataMatch, handleChange] = searchPanel
 
     const setStyle = () => {
         let style = {}
