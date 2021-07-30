@@ -11,6 +11,7 @@ import { URLHome, URLHided, URLClosed } from '../../constants'
 
 import './App.css'
 
+// создаем и экспортируем контекст, котоый использеется в компонентах SearchPanel и SortPanel
 export const ControlPanelContext = React.createContext()
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
   // если значение поля поиска есть подстрока поля name информационного блока, то dataMatch = true,
   // иначе - false
   const [dataMatch, setDataMatch] = useState(false)
+
+  // определение выбранного типа сортировки
+  const [sortPanelOption, setSortPanelOption] = useState(0)
 
   // функция, вызываемая каждый раз, при переходе на страницу или ее обновлении
   useEffect(() => {
@@ -65,6 +69,10 @@ function App() {
     setSearchData(event.target.value)
   }
 
+  const handleChangeOption = (event) => {
+    setSortPanelOption(event.target.value)
+  }
+
   // поиск блока
   // items - массив объектов (с сервера), searchString - строка в поле поиска
   const search = (items, searchString) => { 
@@ -84,7 +92,14 @@ function App() {
       <div className='App'>
         <ButtonsRoute />
           <Route path='/home'>
-            <ControlPanelContext.Provider value={[handleChange, dataMatch]}>
+            <ControlPanelContext.Provider 
+              value={
+                {
+                  searchPanel: [dataMatch, handleChange],
+                  sortPanel: [sortPanelOption, handleChangeOption]
+                }
+              }
+            >
               <ControlPanel />
             </ControlPanelContext.Provider>
             <HomeFetch 
@@ -94,7 +109,14 @@ function App() {
               setHomeData={setHomeData} />
           </Route>
           <Route path='/hided'>
-            <ControlPanelContext.Provider value={[handleChange, dataMatch]}>
+            <ControlPanelContext.Provider 
+              value={
+                {
+                  searchPanel: [dataMatch, handleChange], 
+                  sortPanel: [sortPanelOption, handleChangeOption]
+                }
+              }
+            >
               <ControlPanel />
             </ControlPanelContext.Provider>
             <HidedFetch 
@@ -104,7 +126,14 @@ function App() {
               setHidedData={setHidedData} />  
           </Route> 
           <Route path='/closed'>
-            <ControlPanelContext.Provider value={[handleChange, dataMatch]}>
+            <ControlPanelContext.Provider 
+              value={
+                {
+                  searchPanel: [dataMatch, handleChange], 
+                  sortPanel: [sortPanelOption, handleChangeOption]
+                }
+              }
+            >
               <ControlPanel />
             </ControlPanelContext.Provider>
             <ClosedFetch 
