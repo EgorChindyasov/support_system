@@ -5,12 +5,10 @@ import SortPanel from '../SortPanel/SortPanel'
 
 import './ControlPanel.css'
 
-const ControlPanel = ({ handleChange, dataMatch }) => {
+const ControlPanel = () => {
     return (
         <div className='control_panel'>
-            <SearchPanel
-                handleChange={handleChange} 
-                dataMatch={dataMatch} />
+            <SearchPanel />
             <SortPanel />
         </div>
     )
