@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { ControlPanelContext } from '../App/App'
 
 import './SearchPanel.css'
 
-const Search = ({ handleChange, dataMatch }) => {
+// const Search = ({ handleChange, dataMatch }) => {
+const Search = () => {
+
+    const [handleChange, dataMatch] = useContext(ControlPanelContext)
 
     const setStyle = () => {
         let style = {}
