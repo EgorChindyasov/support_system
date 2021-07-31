@@ -105,7 +105,8 @@ function App() {
               data={search(homeData, searchData)} 
               setDataMatch={setDataMatch}
               searchData={searchData}
-              setHomeData={setHomeData} />
+              setHomeData={setHomeData}
+              sortPanelOption={sortPanelOption} />
             </ControlPanelContext.Provider>
           </Route>
           <Route path='/hided'>
@@ -122,7 +123,8 @@ function App() {
               data={search(hidedData, searchData)} 
               setDataMatch={setDataMatch}
               searchData={searchData}
-              setHidedData={setHidedData} />  
+              setHidedData={setHidedData}
+              sortPanelOption={sortPanelOption} />  
             </ControlPanelContext.Provider>
           </Route> 
           <Route path='/closed'>
@@ -139,7 +141,8 @@ function App() {
               data={search(closedData, searchData)} 
               setDataMatch={setDataMatch}
               searchData={searchData}
-              setClosedData={setClosedData} /> 
+              setClosedData={setClosedData}
+              sortPanelOption={sortPanelOption} /> 
             </ControlPanelContext.Provider> 
           </Route> 
       </div>
