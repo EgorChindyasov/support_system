@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Closed from '../pages/Closed'
 
 const ClosedFetch = ({ data, setDataMatch, searchData, setClosedData }) => {
