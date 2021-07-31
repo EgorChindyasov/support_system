@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
 import arrow_up from '../../img/arrow_up.png'
 import arrow_down from '../../img/arrow_down.png'
 
+import { AlertContext } from '../InformBlock/InformBlock'
+
 import './Arrow.css'
 
-function Arrow ({alert}) {
+function Arrow () {
+
+    const alert = useContext(AlertContext)
 
     const isAlertShow = () => {
         if (alert === false) return arrow_down
