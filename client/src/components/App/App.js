@@ -31,17 +31,17 @@ function App() {
   const [dataMatch, setDataMatch] = useState(false)
 
   // определение выбранного типа сортировки
-  const [sortPanelOption, setSortPanelOption] = useState(0)
+  const [sortPanelOption, setSortPanelOption] = useState('0')
 
   // функция, вызываемая каждый раз, при переходе на страницу или ее обновлении
   useEffect(() => {
     async function homeFetchAPI() {
-        // подключаемся к API сервера 
-        let res = await fetch(URLHome)
-        // распарсиваем json (получаем массив объектов) 
-        res = await res.json()
-        // полученный массив заносим в состояние homeData
-        setHomeData(res)
+      // подключаемся к API сервера 
+      let res = await fetch(URLHome)
+      // распарсиваем json (получаем массив объектов) 
+      res = await res.json()
+      // полученный массив заносим в состояние homeData
+      setHomeData(res)
     }
     async function hidedFetchAPI() {
       let res = await fetch(URLHided)
@@ -101,12 +101,12 @@ function App() {
               }
             >
               <ControlPanel />
-            </ControlPanelContext.Provider>
             <HomeFetch 
               data={search(homeData, searchData)} 
               setDataMatch={setDataMatch}
               searchData={searchData}
               setHomeData={setHomeData} />
+            </ControlPanelContext.Provider>
           </Route>
           <Route path='/hided'>
             <ControlPanelContext.Provider 
@@ -118,12 +118,12 @@ function App() {
               }
             >
               <ControlPanel />
-            </ControlPanelContext.Provider>
             <HidedFetch 
               data={search(hidedData, searchData)} 
               setDataMatch={setDataMatch}
               searchData={searchData}
               setHidedData={setHidedData} />  
+            </ControlPanelContext.Provider>
           </Route> 
           <Route path='/closed'>
             <ControlPanelContext.Provider 
@@ -135,12 +135,12 @@ function App() {
               }
             >
               <ControlPanel />
-            </ControlPanelContext.Provider>
             <ClosedFetch 
               data={search(closedData, searchData)} 
               setDataMatch={setDataMatch}
               searchData={searchData}
-              setClosedData={setClosedData} />  
+              setClosedData={setClosedData} /> 
+            </ControlPanelContext.Provider> 
           </Route> 
       </div>
     </BrowserRouter>
