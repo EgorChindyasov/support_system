@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hided from '../pages/Hided'
 
 const HidedFetch = ({ data, setDataMatch, searchData, setHidedData }) => {
 
   // data - массив объектов
 
-  if (data.length === 0 && searchData != 0) {
-    setDataMatch(true)
-  }
-  else {
-    setDataMatch(false)
-  }
+  useEffect(() => {
+    if (data.length === 0 && searchData != 0) {
+      setDataMatch(true)
+    }
+    else {
+      setDataMatch(false)
+    }
+  }, [data, setDataMatch, searchData])
   
   return (
     data.map(message => {
