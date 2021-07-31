@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import Home from '../pages/Home'
 
-const HomeFetch = ({ data, setDataMatch, searchData, setHomeData }) => {
+const HomeFetch = ({ data, setDataMatch, searchData, setHomeData, sortPanelOption }) => {
 
     // data - массив объектов
 
+  // обрабатываем сортировку 'По-умолчанию'
   useEffect(() => {
     if (data.length === 0 && searchData != 0) {
       setDataMatch(true)
@@ -13,6 +14,32 @@ const HomeFetch = ({ data, setDataMatch, searchData, setHomeData }) => {
       setDataMatch(false)
     }
   }, [data, setDataMatch, searchData])
+
+  useEffect(() => {
+    // обрабатываем сортировку 'Сначало ошибки'
+    if (sortPanelOption === '1') {
+      data.map(item => {
+        if (item.importance === false) {
+          if (searchData != 0)
+            setDataMatch(true)
+          else
+            setDataMatch(false)
+        }
+      })
+    }
+
+    // обрабатываем сортировку 'Сначало предупреждения'
+    if (sortPanelOption === '2') {
+      data.map(item => {
+        if (item.importance === true) {
+          if (searchData != 0)
+            setDataMatch(true)
+          else
+            setDataMatch(false)
+        }
+      })
+    }
+  }, )
 
   return (
     data.map(message => {
