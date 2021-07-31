@@ -22,13 +22,13 @@ function InformBlock( {id, name, content, importance, display, del, hide} ) {
     // рендерим блоки с полем importance = true
     if (sortPanelOption === '1') {
         if (importance === false)
-          return null
+            return null
       }
     
     // рендерим блоки с полем importance = false
     if (sortPanelOption === '2') {
         if (importance === true)
-          return null
+            return null
       }
 
     const toggleAlert = () => setAlert(prev => !prev)
