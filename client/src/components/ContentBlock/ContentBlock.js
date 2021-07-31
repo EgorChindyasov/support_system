@@ -9,13 +9,13 @@ import NameBlock from '../NameBlock/NameBlock'
 
 import './ContentBlock.css'
 
-function ContentBlock ( {toggle, name, alert, importance, display, del, hide} ) {
+function ContentBlock ( {toggle, name, importance, display, del, hide} ) {
 
     return (
         <div className='block' onClick={toggle}>
             <IconMessage importance={importance}/>
             <NameBlock name={name}/>
-            <Arrow alert={alert}/>
+            <Arrow />
             <HideBlock display={display} hide={hide}/>
             <ReturnBlock display={display}/>
             <CloseBlock display={display} del={del}/>
