@@ -1,9 +1,11 @@
-import React from 'react'
-import hidedIMG from '../../../img/hided.png'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Prompt from '../../Prompt/Prompt'
+import hidedIMG from '../../../img/hided.png';
 
-import './ButtonToHided.css'
+import Prompt from '../../Prompt/Prompt';
+
+import './ButtonToHided.css';
 
 const ButtonToHided = () => {
     return (
@@ -12,13 +14,13 @@ const ButtonToHided = () => {
                 <Prompt description={'Скрытые'} />
             </div>
             <span>
-                <a href="http://localhost:3000/hided">
+                <Link to="/hided">
                     <img src={hidedIMG} className="icon_to_hided" alt='Скрытые' />
-                </a>
+                </Link>
 
             </span>
         </div>
     )
-}
+};
 
-export default ButtonToHided
+export default ButtonToHided;

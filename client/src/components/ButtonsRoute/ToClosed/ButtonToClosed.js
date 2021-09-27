@@ -1,9 +1,11 @@
-import React from 'react'
-import closedIMG from '../../../img/closed.png'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Prompt from '../../Prompt/Prompt'
+import closedIMG from '../../../img/closed.png';
 
-import './ButtonToClosed.css'
+import Prompt from '../../Prompt/Prompt';
+
+import './ButtonToClosed.css';
 
 const ButtonToClosed = () => {
     return (
@@ -12,12 +14,12 @@ const ButtonToClosed = () => {
                 <Prompt description={'Закрытые'} />
             </div>
             <span>
-                <a href="http://localhost:3000/closed">
+                <Link to="/closed">
                     <img src={closedIMG} className="icon_to_closed" alt='Закрытые' />
-                </a>
+                </Link>
             </span>
         </div>
     )
-}
+};
 
-export default ButtonToClosed
+export default ButtonToClosed;

@@ -1,9 +1,11 @@
-import React from 'react'
-import homeIMG from '../../../img/home.png'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Prompt from '../../Prompt/Prompt'
+import homeIMG from '../../../img/home.png';
 
-import './ButtonToHome.css'
+import Prompt from '../../Prompt/Prompt';
+
+import './ButtonToHome.css';
 
 const ButtonToHome = () => {
     return (
@@ -12,12 +14,12 @@ const ButtonToHome = () => {
                 <Prompt description={'На главную'} />
             </div>
             <span>
-                <a href="http://localhost:3000/home">
+                <Link to="http://localhost:3000/home">
                     <img src={homeIMG} className="icon_to_home" alt='На главную' /> 
-                </a>
+                </Link>
             </span>
         </div>
     )
-}
+};
 
-export default ButtonToHome
+export default ButtonToHome;
